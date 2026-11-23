@@ -1,0 +1,198 @@
+# ============================================================
+# Seal-Be-Gone
+# v 1.0.0
+#
+# Purpose:
+# Supplies materials needed for Mines story progression
+# without bypassing associated story quests.
+# Does not provide materials acquired outside of mines.
+# ============================================================
+
+
+# ------------------------------------------------------------
+# WATER SEAL
+# Trigger: Mine Floor 20
+# ------------------------------------------------------------
+
+[seal_be_gone_water_seal_supplies]
+npc = "errol"
+subject_line = "A few oddities"
+local = "Salutations, [Ari]!\n\nEiland and I were looking through some of the dustier corners of the museum, and found a few odds and ends. I thought they might be of interest to you, but if you don't require them and care to return them, some of them might be perfect for the museum's collection!"
+
+requirements = { reached_mines_level = 20 }
+can_repeat = false
+
+items = [
+    { item_name = "stone_loach", count = 1 },
+    { item_name = "upper_mines_mushroom", count = 1 },
+    { item_name = "ore_ruby", count = 1 },
+    { item_name = "lantern_moth", count = 1 },
+]
+
+
+# ------------------------------------------------------------
+# EARTH SEAL
+# Trigger: Mine Floor 40
+# ------------------------------------------------------------
+
+[seal_be_gone_earth_seal_supplies]
+npc = "eiland"
+subject_line = "From one archivist to another"
+local = "Dear [Ari],\n\nI had intended to forward these to you, as I know you can appreciate their intricacies! Unfortunately, I was so busy archiving your contributions that it slipped my mind until now. Please don't tell Adeline... she'll try to improve my scheduling system again!"
+
+requirements = { reached_mines_level = 40 }
+can_repeat = false
+
+items = [
+    { item_name = "coral_mantis", count = 1 },
+    { item_name = "ore_sapphire", count = 1 },
+    { item_name = "archerfish", count = 1 },
+    { item_name = "cave_kelp", count = 1 },
+]
+
+
+# ------------------------------------------------------------
+# SEALING SCROLL MATERIALS
+#
+# Trigger: 'Procuring the Sealing Scroll' quest (Mine Floor 60)
+#
+# Provides the items needed to complete Balor's quest
+# Does not provide purchasable items (silver ore -> ingots)
+#
+# ------------------------------------------------------------
+
+[seal_be_gone_sealing_scroll_supplies]
+npc = "wheedle"
+subject_line = "FREE SAMPLE"
+local = "A little birdy told me you might be in the market for a few precious things. No, no, no need to thank me for these, my friend, or feel any sort of special obligation to me... I'm sure my generosity won't be wasted on you!"
+
+requirements = { quest_is_active = "procuring_the_sealing_scroll" }
+can_repeat = false
+
+items = [
+    { item_name = "ore_ruby", count = 10 },
+    { item_name = "ore_sapphire", count = 10 },
+    { item_name = "ore_emerald", count = 10 },
+]
+
+
+# ------------------------------------------------------------
+# FIRE SEAL
+#
+# Trigger: 'Breaking the Fire Seal' quest (Floor 60)
+#
+# Sealing Scroll quest completion required.
+#
+# ------------------------------------------------------------
+
+[seal_be_gone_fire_seal_supplies]
+npc = "juniper"
+subject_line = "A little something from Dozy"
+local = "[Ari],\n\nI wasn't planning on sending these to you, but Dozy was quite insistent. Do make sure to thank him next time you stop by the bathhouse. If you couldn't figure it out for yourself, Hayden sells dog treats."
+
+requirements = { quest_is_active = "breaking_the_fire_seal" }
+can_repeat = false
+
+items = [
+    { item_name = "faceted_rock_gem", count = 1 },
+    { item_name = "rockroot", count = 1 },
+    { item_name = "ore_emerald", count = 1 },
+]
+
+
+# ------------------------------------------------------------
+# VOID MASS
+#
+# Trigger: 'Creating the Void Mass' quest (Mine Floor 80)
+# 
+# ------------------------------------------------------------
+
+[seal_be_gone_void_mass_supplies]
+npc = "seridia"
+subject_line = "A gift from the Void"
+local = "Hero,\n\nI do not have much power as I am, but I may have enough for this to reach you. Should you struggle in harvesting these materials from the Void, these should serve us in creating the Void Mass.\n\nPlease hurry, Hero. I hear a whisper from beyond. I cannot quite make out what it says, but it sounds like a name...\n\nit sounds like..."
+
+requirements = { quest_is_active = "creating_the_void_mass" }
+can_repeat = false
+
+items = [
+    { item_name = "void_stone", count = 5 },
+    { item_name = "void_powder", count = 5 },
+    { item_name = "void_herb", count = 5 },
+    { item_name = "void_pearl", count = 5 },
+]
+
+
+# ------------------------------------------------------------
+# RUINS SEAL
+#
+# Trigger: 'Breaking the Ruins Seal' quest
+#
+# ------------------------------------------------------------
+
+[seal_be_gone_ruins_seal_supplies]
+npc = "seridia"
+subject_line = "Your task nears its end"
+local = "Hero,\n\nShould you have need of them, these will serve you well. Remember, though, it is vital that you give them to the Void [Ari]... above all else, do not try to offer them to the Ruins Seal Tablet directly!\n\nAnd please, I beg you once again, do not tell Lord Caldarus any of this. Especially not of the whispers. But hurry, Hero. The name is clear, now, and the whispers ceaseless.\n\nSeridia\n\nSeridia"
+
+requirements = { quest_is_active = "breaking_the_ruins_seal" }
+can_repeat = false
+
+items = [
+    { item_name = "breath_of_fire", count = 1 },
+    { item_name = "smoke_moth", count = 1 },
+    { item_name = "firesail_fish", count = 1 },
+    { item_name = "obsidian", count = 1 },
+]
+
+
+# ------------------------------------------------------------
+# FINAL SEAL
+#
+# Trigger: 'Breaking the Final Seal' quest
+#
+# Provides the ingredients needed to craft:
+#   - Dragon-Forged Fang
+#   - Dragon-Forged Horn
+#   - Dragon-Forged Core
+#   - Dragon-Forged Powder
+#
+# Does not provide purchasable items (mistril ore -> ingots)
+# 
+# ------------------------------------------------------------
+
+[seal_be_gone_final_seal_supplies]
+npc = "stillwell"
+subject_line = "Seal Supplies"
+local = "[Ari]... or should I address you as Dragonsworn?\n\nThis letter may come as a surprise to you, but I have foreseen that you may have need of its contents. Destiny will be upon you shortly, and though it may shake Mistria to its very foundations, I trust that you and your allies will see it through to its end."
+
+requirements = { quest_is_active = "breaking_the_final_seal" }
+can_repeat = false
+
+items = [
+    # Dragon-Forged Fang
+    { item_name = "monster_fang", count = 5 },
+    { item_name = "void_stone", count = 5 },
+    { item_name = "void_herb", count = 5 },
+    { item_name = "written_root", count = 1 },
+
+    # Dragon-Forged Horn
+    { item_name = "monster_horn", count = 5 },
+    { item_name = "void_powder", count = 5 },
+    { item_name = "void_pearl", count = 5 },
+    { item_name = "void_snail", count = 1 },
+
+    # Dragon-Forged Core
+    { item_name = "monster_core", count = 5 },
+    { item_name = "ancient_firefly", count = 1 },
+
+    # Dragon-Forged Powder
+    { item_name = "monster_powder", count = 5 },
+    { item_name = "luminescent_crab", count = 1 },
+
+	# Required once each for Core and Powder
+    { item_name = "ore_pink_diamond", count = 2 },
+
+    # Required once each for all four recipes
+    { item_name = "essence_stone_medium", count = 4 },
+]
